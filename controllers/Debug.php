@@ -26,4 +26,8 @@ class Debug extends Controller
     public function phpinfo()
     {
     }
+    public function hhvminfo()
+    {
+    }
+
 }

@@ -44,8 +44,15 @@ class Plugin extends PluginBase
                         'label' => 'voipdeploy.serverdebug::lang.nav.phpInfo',
                         'icon' => 'icon-code',
                         'url' => Backend::url('voipdeploy/serverdebug/debug/phpinfo'),
-                        'permission' => 'voipdeploy.serverdebug.access_phpinfo'
+                        'permission' => 'voipdeploy.serverdebug.access_phpInfo'
                     ],
+		    'hhvminfo' => [
+			'label' => 'voipdeploy.serverdebug::lang.nav.hhvmInfo',
+			'icon' => 'icon-code',
+			'url' => Backend::url('voipdeploy/serverdebug/debug/hhvminfo'),
+			'permission' => 'voipdeploy.serverdebug.access_hhvmInfo'
+		    ],
+
                 ]
             ]
         ];
@@ -66,6 +73,11 @@ class Plugin extends PluginBase
                 'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
                 'label' => 'voipdeploy.serverdebug::lang.permissions.access_phpInfo'
             ],
+            'voipdeploy.serverdebug::lang.nav.hhvmInfo' => [
+                'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
+                'label' => 'voipdeploy.serverdebug::lang.permissions.access_hhvmInfo'
+            ],
+
         ];
     }
 
