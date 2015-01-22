@@ -1,0 +1,29 @@
+<table class="table">
+    <tr>
+        <th><?= trans('voipdeploy.serverdebug::lang.serverparams.serverParam') ?></th>
+        <th><?= trans('voipdeploy.serverdebug::lang.serverparams.serverParamValue') ?></th>
+    </tr>
+    <?php foreach ($serverParams as $paramName => $paramValue): ?>
+    <tr>
+        <td><?= $paramName ?></td>
+        <td>
+            <?php if (is_array($paramValue)): ?>
+            <table class="table">
+                <tr>
+                    <th><?= trans('voipdeploy.serverdebug::lang.serverparams.key') ?></th>
+                    <th><?= trans('voipdeploy.serverdebug::lang.serverparams.value') ?></th>
+                </tr>
+                <?php foreach ($paramValue as $key => $value): ?>
+                <tr>
+                    <td><?= $key ?></td>
+                    <td><?= $value  ?></td>
+                </tr>
+                <?php endforeach ?>
+            </table>
+            <?php else: ?>
+            <?= $paramValue ?>
+            <?php endif ?>
+        </td>
+    </tr>
+    <?php endforeach ?>
+</table>
