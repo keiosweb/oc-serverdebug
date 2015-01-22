@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Illuminate\Support\Facades\Request;
 
 /**
  * Debug Back-end Controller
@@ -19,6 +20,7 @@ class Debug extends Controller
     public function serverparameters()
     {
         $this->vars['serverParams'] = $_SERVER;
+        $this->vars['baseUrl'] = (Request::getBaseUrl() ?: 'empty');
     }
 
     public function phpinfo()
