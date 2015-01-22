@@ -3,13 +3,13 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use Illuminate\Support\Facades\Request;
-
+use Lang;
 /**
  * Debug Back-end Controller
  */
 class Debug extends Controller
 {
-
+    public $requiredPermissions = ['voipdeploy.serverdebug.access_serverDebug'];
     public function __construct()
     {
         parent::__construct();
@@ -26,4 +26,8 @@ class Debug extends Controller
     public function phpinfo()
     {
     }
+    public function hhvminfo()
+    {
+    }
+
 }
