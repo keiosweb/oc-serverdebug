@@ -8,7 +8,6 @@ use Backend;
  */
 class Plugin extends PluginBase
 {
-
     /**
      * Returns information about this plugin.
      *
@@ -32,25 +31,25 @@ class Plugin extends PluginBase
                 'url' => Backend::url('voipdeploy/serverdebug/debug/phpinfo'),
                 'icon' => 'icon-wrench',
                 'order' => 500,
-                'permission' => 'voipdeploy.serverdebug.access_serverDebug',
+                'permissions' => ['voipdeploy.serverdebug.access_serverDebug'],
                 'sideMenu' => [
                     'serverparameters' => [
                         'label' => 'voipdeploy.serverdebug::lang.nav.serverParameters',
                         'icon' => 'icon-plug',
                         'url' => Backend::url('voipdeploy/serverdebug/debug/serverparameters'),
-                        'permission' => 'voipdeploy.serverdebug.access_serverParams'
+                        'permissions' => ['voipdeploy.serverdebug.access_serverParams'],
                     ],
                     'phpinfo' => [
                         'label' => 'voipdeploy.serverdebug::lang.nav.phpInfo',
                         'icon' => 'icon-code',
                         'url' => Backend::url('voipdeploy/serverdebug/debug/phpinfo'),
-                        'permission' => 'voipdeploy.serverdebug.access_phpInfo'
+                        'permissions' => ['voipdeploy.serverdebug.access_serverDebug'],
                     ],
 		    'hhvminfo' => [
 			'label' => 'voipdeploy.serverdebug::lang.nav.hhvmInfo',
 			'icon' => 'icon-code',
 			'url' => Backend::url('voipdeploy/serverdebug/debug/hhvminfo'),
-			'permission' => 'voipdeploy.serverdebug.access_hhvmInfo'
+			'permissions' => ['voipdeploy.serverdebug.access_hhvmInfo'],
 		    ],
 
                 ]
@@ -69,11 +68,11 @@ class Plugin extends PluginBase
                 'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
                 'label' => 'voipdeploy.serverdebug::lang.permissions.access_serverParams'
             ],
-            'voipdeploy.serverdebug::lang.nav.phpInfo' => [
+            'voipdeploy.serverdebug.access_phpInfo' => [
                 'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
                 'label' => 'voipdeploy.serverdebug::lang.permissions.access_phpInfo'
             ],
-            'voipdeploy.serverdebug::lang.nav.hhvmInfo' => [
+            'voipdeploy.serverdebug.access_hhvmInfo' => [
                 'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
                 'label' => 'voipdeploy.serverdebug::lang.permissions.access_hhvmInfo'
             ],
