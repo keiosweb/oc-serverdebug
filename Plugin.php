@@ -1,4 +1,4 @@
-<?php namespace Voipdeploy\ServerDebug;
+<?php namespace Keios\ServerDebug;
 
 use System\Classes\PluginBase;
 use Backend;
@@ -18,7 +18,7 @@ class Plugin extends PluginBase
         return [
             'name' => 'ServerDebug',
             'description' => 'Provides information about PHP environment and Web Server configuration',
-            'author' => 'Voipdeploy',
+            'author' => 'Keios',
             'icon' => 'icon-wrench'
         ];
     }
@@ -27,29 +27,29 @@ class Plugin extends PluginBase
     {
         return [
             'serverdebug' => [
-                'label' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
-                'url' => Backend::url('voipdeploy/serverdebug/debug/phpinfo'),
+                'label' => 'keios.serverdebug::lang.nav.serverDebug',
+                'url' => Backend::url('keios/serverdebug/debug/phpinfo'),
                 'icon' => 'icon-wrench',
                 'order' => 500,
-                'permissions' => ['voipdeploy.serverdebug.access_serverDebug'],
+                'permissions' => ['keios.serverdebug.access_serverDebug'],
                 'sideMenu' => [
                     'serverparameters' => [
-                        'label' => 'voipdeploy.serverdebug::lang.nav.serverParameters',
+                        'label' => 'keios.serverdebug::lang.nav.serverParameters',
                         'icon' => 'icon-plug',
-                        'url' => Backend::url('voipdeploy/serverdebug/debug/serverparameters'),
-                        'permissions' => ['voipdeploy.serverdebug.access_serverParams'],
+                        'url' => Backend::url('keios/serverdebug/debug/serverparameters'),
+                        'permissions' => ['keios.serverdebug.access_serverParams'],
                     ],
                     'phpinfo' => [
-                        'label' => 'voipdeploy.serverdebug::lang.nav.phpInfo',
+                        'label' => 'keios.serverdebug::lang.nav.phpInfo',
                         'icon' => 'icon-code',
-                        'url' => Backend::url('voipdeploy/serverdebug/debug/phpinfo'),
-                        'permissions' => ['voipdeploy.serverdebug.access_serverDebug'],
+                        'url' => Backend::url('keios/serverdebug/debug/phpinfo'),
+                        'permissions' => ['keios.serverdebug.access_serverDebug'],
                     ],
 		    'hhvminfo' => [
-			'label' => 'voipdeploy.serverdebug::lang.nav.hhvmInfo',
+			'label' => 'keios.serverdebug::lang.nav.hhvmInfo',
 			'icon' => 'icon-code',
-			'url' => Backend::url('voipdeploy/serverdebug/debug/hhvminfo'),
-			'permissions' => ['voipdeploy.serverdebug.access_hhvmInfo'],
+			'url' => Backend::url('keios/serverdebug/debug/hhvminfo'),
+			'permissions' => ['keios.serverdebug.access_hhvmInfo'],
 		    ],
 
                 ]
@@ -60,21 +60,21 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'voipdeploy.serverdebug.access_serverDebug' => [
-                'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
-                'label' => 'voipdeploy.serverdebug::lang.permissions.access_serverDebug'
+            'keios.serverdebug.access_serverDebug' => [
+                'tab' => 'keios.serverdebug::lang.nav.serverDebug',
+                'label' => 'keios.serverdebug::lang.permissions.access_serverDebug'
             ],
-            'voipdeploy.serverdebug.access_serverParams' => [
-                'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
-                'label' => 'voipdeploy.serverdebug::lang.permissions.access_serverParams'
+            'keios.serverdebug.access_serverParams' => [
+                'tab' => 'keios.serverdebug::lang.nav.serverDebug',
+                'label' => 'keios.serverdebug::lang.permissions.access_serverParams'
             ],
-            'voipdeploy.serverdebug.access_phpInfo' => [
-                'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
-                'label' => 'voipdeploy.serverdebug::lang.permissions.access_phpInfo'
+            'keios.serverdebug.access_phpInfo' => [
+                'tab' => 'keios.serverdebug::lang.nav.serverDebug',
+                'label' => 'keios.serverdebug::lang.permissions.access_phpInfo'
             ],
-            'voipdeploy.serverdebug.access_hhvmInfo' => [
-                'tab' => 'voipdeploy.serverdebug::lang.nav.serverDebug',
-                'label' => 'voipdeploy.serverdebug::lang.permissions.access_hhvmInfo'
+            'keios.serverdebug.access_hhvmInfo' => [
+                'tab' => 'keios.serverdebug::lang.nav.serverDebug',
+                'label' => 'keios.serverdebug::lang.permissions.access_hhvmInfo'
             ],
 
         ];

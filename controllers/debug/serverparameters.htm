@@ -1,8 +1,8 @@
 <p>Base URL: <?= $baseUrl ?></p>
 <table class="table">
     <tr>
-        <th><?= trans('voipdeploy.serverdebug::lang.serverparams.serverParam') ?></th>
-        <th><?= trans('voipdeploy.serverdebug::lang.serverparams.serverParamValue') ?></th>
+        <th><?= trans('keios.serverdebug::lang.serverparams.serverParam') ?></th>
+        <th><?= trans('keios.serverdebug::lang.serverparams.serverParamValue') ?></th>
     </tr>
     <?php foreach ($serverParams as $paramName => $paramValue): ?>
     <tr>
@@ -11,8 +11,8 @@
             <?php if (is_array($paramValue)): ?>
             <table class="table">
                 <tr>
-                    <th><?= trans('voipdeploy.serverdebug::lang.serverparams.key') ?></th>
-                    <th><?= trans('voipdeploy.serverdebug::lang.serverparams.value') ?></th>
+                    <th><?= trans('keios.serverdebug::lang.serverparams.key') ?></th>
+                    <th><?= trans('keios.serverdebug::lang.serverparams.value') ?></th>
                 </tr>
                 <?php foreach ($paramValue as $key => $value): ?>
                 <tr>

@@ -1,4 +1,4 @@
-<?php namespace Voipdeploy\ServerDebug\Controllers;
+<?php namespace Keios\ServerDebug\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -9,12 +9,12 @@ use Lang;
  */
 class Debug extends Controller
 {
-    public $requiredPermissions = ['voipdeploy.serverdebug.access_serverDebug'];
+    public $requiredPermissions = ['keios.serverdebug.access_serverDebug'];
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Voipdeploy.ServerDebug', 'serverdebug', 'debug');
+        BackendMenu::setContext('Keios.ServerDebug', 'serverdebug', 'debug');
     }
 
     public function serverparameters()
