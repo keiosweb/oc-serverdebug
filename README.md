@@ -1,6 +1,8 @@
 Server Debug
 --------------
 
+**Link to company repo: http://gitlab.c-call.eu/october_plugins/serverdebug**
+
 Server debug is a simple, quickly written plugin that adds "Server Debug" position to the main menu and allows you to see the webserver details, user agent details and provides a handy access to phpInfo and hhvmInfo. 
 
 It can be very useful when debugging problems on various hostings.
